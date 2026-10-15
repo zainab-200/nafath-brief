@@ -12,7 +12,7 @@ A telecom operator is launching a 5G service for emergency responders. The servi
 - **Cybersecurity** gives a clear plan to detect, contain and recover from attacks.
 - **Data** turns daily usage per region into reports that show where the service is under stress.
 
-Together, these fields protect the service at every layer, from the network to the responder's hand.
+Together, these fields protect every layer of the service, and my track, Software, focuses on safe and idempotent HTTP methods for automatic retries.
 
 ## Software
 
