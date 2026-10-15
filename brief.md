@@ -92,4 +92,12 @@ Resource: Understand star schema and the importance for Power BI - Microsoft Lea
 
 ## Misconception in My Track
 
+**Wrong belief:** an idempotent request must always return the same response. For example, DELETE seems "not idempotent" because the first call returns 200 and the second returns 404.
+
+**Correct version:** idempotency is about the intended effect on the server, not the response. After one DELETE or ten, the resource is simply deleted. The server may even log each request separately.
+
+**Proof:** RFC 9110, Section 9.2.2 "Idempotent Methods".
+
 ## Open Question
+
+**Next step:** verify the current status of the IETF draft for the Idempotency-Key HTTP header. It could let the responder app retry POST requests safely, without duplicate incident reports.
