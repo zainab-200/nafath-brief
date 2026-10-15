@@ -54,9 +54,41 @@ Resource: Build an offline-first app - Android Developers - https://developer.an
 
 ## Networking
 
+**Network slicing:** one physical 5G network runs several logical networks, and each slice has its own capabilities and characteristics.
+
+**A dedicated responder slice can:**
+
+- Reserve capacity and guaranteed throughput.
+- Give responder traffic a higher QoS priority.
+- Support mission-critical voice, video and data.
+
+**Result:** responders stay connected even when the public network is congested. The GSMA slice template already includes a Public Safety slice type.
+
+Resource: GSMA NG.116 - Generic Network Slice Template (Version 10.0) - https://www.gsma.com/newsroom/wp-content/uploads//NG.116-v10.0.pdf
+
 ## Cybersecurity
 
+NIST defines four phases. During an attack, such as a DDoS on the service:
+
+1. **Preparation:** the team, tools, contact lists and hardened systems are ready in advance.
+2. **Detection and Analysis:** confirm the attack and measure its scope.
+3. **Containment, Eradication and Recovery:** isolate affected systems, remove the cause and restore service.
+4. **Post-Incident Activity:** hold a lessons-learned review and improve defenses.
+
+**Note:** NIST replaced this guide with Revision 3 in April 2025.
+
+Resource: NIST SP 800-61 Rev. 2 - Computer Security Incident Handling Guide - https://csrc.nist.gov/pubs/sp/800/61/r2/final
+
 ## Data
+
+**Both schemas:** a central fact table stores the measurements and links to dimension tables.
+
+- **Star schema:** each dimension, such as Date or Region, is one denormalized table.
+- **Snowflake schema:** a dimension is split into several normalized tables, for example Region and Governorate.
+
+**Recommendation: star schema.** One daily usage fact table with Date and Region dimensions needs fewer joins, so reports are simpler and faster.
+
+Resource: Understand star schema and the importance for Power BI - Microsoft Learn - https://learn.microsoft.com/en-us/power-bi/guidance/star-schema
 
 ## Misconception in My Track
 
